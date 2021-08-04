@@ -103,7 +103,7 @@ const getModules = () => {
 
 /* Работа со скриптами */
 const jsMin = series([getModules], () => {
-  return src([dev.js, `!${dev.jsHelpers}`])
+  return src([dev.jsHelpers, dev.js])
     .pipe(concat('app.min.js'))
     .pipe(uglES())
     .pipe(dest(prod.js));

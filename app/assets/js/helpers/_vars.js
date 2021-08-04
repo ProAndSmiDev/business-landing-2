@@ -1,3 +1,3 @@
-const header = document.querySelector(`${prefix}-header`);
-const isFixedHeader = header.classList.contains(`${prefix.slice(1)}-header--is-fixed`);
-const isStickyHeader = header.classList.contains(`${prefix.slice(1)}-header--is-sticky`);
+const header = document.querySelector('header');
+const isFixedHeader = header.classList.contains('header--is-fixed');
+const isStickyHeader = header.classList.contains('header--is-sticky');

@@ -12,6 +12,33 @@
       "description": "Some description for project"
     }
   },
+  "menuBlocks": [
+    {
+      "title": "Home",
+      "urlTitle": "Go to beginning",
+      "url": "#"
+    },
+    {
+      "title": "About us",
+      "urlTitle": "Go to section About us",
+      "url": "#about-us"
+    },
+    {
+      "title": "Team",
+      "urlTitle": "Go to section Team",
+      "url": "#our-team"
+    },
+    {
+      "title": "Projects",
+      "urlTitle": "Go to section Projects",
+      "url": "#projects"
+    },
+    {
+      "title": "Contacts",
+      "urlTitle": "Go to section Contact",
+      "url": "#contacts"
+    }
+  ],
   "copyright": {
     "author": "AndSmi",
     "copyright": "Developed by AndSmi"

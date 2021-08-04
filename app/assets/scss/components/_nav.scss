@@ -1,0 +1,153 @@
+.nav {
+  display: flex;
+  position: relative;
+
+  .header &__line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: em(2, $fz);
+    background-color: $primary;
+    transition: left 0.3s ease-in-out, max-width 0.3s ease-in-out;
+
+    @media (max-width: $tablet) {
+      opacity: 0;
+    }
+  }
+
+  &__burger {
+    position: relative;
+  }
+
+  &__list {
+    position: relative;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      top: em(87, $fz);
+      left: -100vw;
+      width: 100vw;
+      transition: left .3s ease-in-out;
+
+      &--is-active {
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    position: static;
+  }
+}
+
+.nav-list {
+  $self: &;
+  display: flex;
+
+  &__item {
+    &:nth-child(2) {
+      &:hover {
+        ~ #{$self}::after {
+          left: 20%;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: em(15, $fz);
+
+      @media (max-width: $tablet) {
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      &--is-active {
+        #{$self} {
+          &__link {
+            border-bottom: 2px solid $primary;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    padding: em(15, $fz);
+    border: 1px solid $secondary;
+    background-color: $third;
+  }
+}
+
+.nav-list-link {
+  letter-spacing: em(0.15, $fz);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__text {
+    $fz: 18;
+    font-size: em($fz, $fz_base);
+    font-weight: 500;
+    color: $secondary;
+  }
+}
+
+.nav-burger {
+  $self: &;
+  $fz: 16;
+  height: em(30, $fz);
+  width: em(30, $fz);
+  font-size: 16px;
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+
+  &--is-active {
+    &#{$self} {
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+      }
+
+      &::before {
+        transform: rotateZ(45deg) translateY(-50%);
+      }
+
+      &::after {
+        transform: rotateZ(-45deg) translateY(-50%);
+      }
+
+      #{$self}__line {
+        display: none;
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: em(2, $fz);
+    background-color: $secondary;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: em(2, $fz);
+    margin-top: em(5, $fz);
+    margin-bottom: em(5, $fz);
+    background-color: $secondary;
+  }
+}
