@@ -1,1 +1,25 @@
-//include helpers/
+include helpers/_mixins
+doctype html
+html(lang="")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    +genMeta('viewport', 'width=device-width, initial-scale=1')
+    block SEO
+    each val, i in copyright
+      +genMeta(i, val)
+    +genLink('favicon.ico', 'shortcut icon')
+    +genLink('styles', 'stylesheet')
+  body
+    .landing-page
+      header.header.header--is-fixed.landing-page__header.js--scroll-by-user
+        include ../components/header/Index
+
+      main.main.landing-page__main
+        block Main
+
+      footer.footer.landing-page__footer
+        include ../components/footer/Index
+
+    +genScript('libs.min')
+    +genScript('app.min')
+
