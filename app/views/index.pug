@@ -1,1 +1,9 @@
-extend ../template/_template
+extends ../template/_template
+
+block SEO
+  +genMeta('keywords', company.seoInfo.keywords)
+  +genMeta('description', company.seoInfo.description)
+  title= company.seoInfo.title
+
+block Main
+  include ../components/banner/Index
