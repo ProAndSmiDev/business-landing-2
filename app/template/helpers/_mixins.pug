@@ -24,7 +24,7 @@ mixin genIconMenu(menu, parent, target)
           span.list__icon(class=`${prefix}-list__icon--${val.postfix}`)
 
 
-mixin genMainMenu(menu, parent, isNav = false, isHeader = false)
+mixin genMainMenu(menu, parent, mode = '', isNav = false, isHeader = false)
   if isNav
     nav.nav(class=`${parent}__nav`)
       span.nav__line
@@ -37,7 +37,7 @@ mixin genMainMenu(menu, parent, isNav = false, isHeader = false)
             a.nav-list-link.nav-list__link(href=val.url title=val.urlTitle)
               span.nav-list-link__text= val.title
   else
-    ul.menu(class=`${parent}__menu`)
+    ul.menu(class=`${parent}__menu ${(mode) ? 'menu--' + mode : ''}`)
       for val in menu
         li.menu__item
           a.menu-link.menu__link(href=val.url title=val.urlTitle)

@@ -42,7 +42,7 @@ body {
   font-weight: 700;
 
   &--is-inverted {
-    color: lighten($third, 14%);
+    color: lighten($primary, 14%);
   }
 
   &__text {
@@ -59,13 +59,13 @@ body {
 
   &--is-btn {
     padding: em(11 15, $fz);
-    background-color: $primary;
+    background-color: $theme;
     text-align: center;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
       opacity: 1;
-      background-color: darken($primary, 10%);
+      background-color: $theme_darker;
     }
   }
 

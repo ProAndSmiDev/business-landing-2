@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: em(2, $fz);
-    background-color: $primary;
+    background-color: $theme;
     transition: left 0.3s ease-in-out, max-width 0.3s ease-in-out;
 
     @media (max-width: $tablet) {
@@ -67,7 +67,7 @@
       &--is-active {
         #{$self} {
           &__link {
-            border-bottom: 2px solid $primary;
+            border-bottom: 2px solid $theme;
           }
         }
       }
@@ -78,7 +78,7 @@
     flex-direction: column;
     padding: em(15, $fz);
     border: 1px solid $secondary;
-    background-color: $third;
+    background-color: $primary;
   }
 }
 
