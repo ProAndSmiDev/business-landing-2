@@ -37,11 +37,11 @@ mixin genMainMenu(menu, parent, mode = '', isNav = false, isHeader = false)
             a.nav-list-link.nav-list__link(href=val.url title=val.urlTitle)
               span.nav-list-link__text= val.title
   else
-    ul.menu(class=`${parent}__menu ${(mode) ? 'menu--' + mode : ''}`)
+    ul.list(class=`${parent}__list ${(mode) ? 'list--' + mode : ''}`)
       for val in menu
-        li.menu__item
-          a.menu-link.menu__link(href=val.url title=val.urlTitle)
-            span.menu-link__text= val.title
+        li.list__item
+          a.list-link.list__link(href=val.url title=val.urlTitle)
+            span.list-link__text= val.title
 
 mixin genTitle(type, parent, text, isInvert = false)
   if type === 'main'

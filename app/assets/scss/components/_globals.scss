@@ -25,8 +25,8 @@ body {
 
 .u-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   padding-right: em(15, $fz);
   padding-left: em(15, $fz);
@@ -34,6 +34,10 @@ body {
   max-width: em(1140, $fz);
   margin-right: auto;
   margin-left: auto;
+
+  &--is-row {
+    flex-direction: row;
+  }
 }
 
 .title {

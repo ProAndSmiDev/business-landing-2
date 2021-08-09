@@ -52,6 +52,9 @@ ul {
 }
 
 input {
+  outline: unset;
+  border: unset;
+
   &::placeholder {
     opacity: 0.6;
   }

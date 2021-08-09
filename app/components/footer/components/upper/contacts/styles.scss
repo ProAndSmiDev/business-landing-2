@@ -1,0 +1,15 @@
+.contacts {
+  @media (max-width: $tablet) {
+    margin-top: em(20, $fz);
+    text-align: center;
+  }
+
+  &__text {
+    $fz: 14;
+    font-size: em($fz, $fz_base);
+    color: $secondary;
+    line-height: em(26, $fz);
+    letter-spacing: em(.15, $fz);
+    max-width: em(177, $fz);
+  }
+}

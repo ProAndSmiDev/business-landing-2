@@ -1,0 +1,56 @@
+.subscribe {
+  @media (max-width: $tablet) {
+    margin-top: em(20, $fz);
+    text-align: center;
+  }
+}
+
+.subscribe-form {
+  &__email {
+    $fz: 14;
+    font-size: em($fz, $fz_base);
+    padding-right: em(15, $fz);
+    padding-left: em(15, $fz);
+    color: $primary_light_med;
+    background-color: $secondary_darker;
+    line-height: em(48, $fz);
+    letter-spacing: em(.15, $fz);
+    border-radius: em(4, $fz);
+    width: 100%;
+    max-width: em(255, $fz);
+
+    @media (max-width: $tablet) {
+      $fz: 12;
+      font-size: em($fz, $fz_base);
+      line-height: em(34, $fz);
+      max-width: 100%;
+    }
+  }
+
+  &__submit {
+    $fz: 18px;
+    font-size: em($fz, $fz_base);
+    width: 100%;
+    margin-top: em(30, $fz);
+    background-color: $theme;
+    color: $secondary;
+    padding-top: em(11, $fz);
+    padding-bottom: em(11, $fz);
+    line-height: em(26, $fz);
+    letter-spacing: em(0.15, $fz);
+    border-radius: em(4, $fz);
+    max-width: em(255, $fz);
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: $theme_darker;
+    }
+
+    @media (max-width: $tablet) {
+      $fz: 14;
+      font-size: em($fz, $fz_base);
+      max-width: 100%;
+      margin-top: em(7, $fz);
+    }
+  }
+}
