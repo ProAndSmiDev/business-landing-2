@@ -13,11 +13,11 @@
     width: 100%;
     max-width: em(255, $fz);
     border-radius: em(4, $fz);
-    background-color: $secondary_darker;
+    background-color: darken(color(secondary), 4%);
     font-size: em($fz, $fz_base);
     line-height: em(48, $fz);
     letter-spacing: em(0.15, $fz);
-    color: $primary_light_med;
+    color: lighten(color(primary), 14%);
 
     @include media(tablet, 'max') {
       $fz: 12;
@@ -35,11 +35,11 @@
     max-width: em(255, $fz);
     margin-top: em(30, $fz);
     border-radius: em(4, $fz);
-    background-color: $theme;
+    background-color: color(theme);
     font-size: em($fz, $fz_base);
     line-height: em(26, $fz);
     letter-spacing: em(0.15, $fz);
-    color: $secondary;
+    color: color(secondary);
     transition: background-color 0.3s ease-in-out;
 
     @include media(tablet, 'max') {
@@ -50,7 +50,7 @@
     }
 
     &:hover {
-      background-color: $theme_darker;
+      background-color: desaturate(darken(color(theme), 4%), 14%);
     }
   }
 }

@@ -10,7 +10,7 @@
     font-size: em($fz, $fz_base);
     line-height: em(26, $fz);
     letter-spacing: em(0.15, $fz);
-    color: $secondary;
+    color: color(secondary);
   }
 
   &__list {

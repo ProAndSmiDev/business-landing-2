@@ -43,10 +43,10 @@ body {
 .title {
   text-transform: uppercase;
   font-weight: 700;
-  color: $secondary;
+  color: color(secondary);
 
   &--is-inverted {
-    color: $primary_light_med;
+    color: lighten(color(primary), 14%);
   }
 
   &__text {
@@ -63,17 +63,17 @@ body {
 
   &--is-btn {
     padding: em(11 15, $fz);
-    background-color: $theme;
+    background-color: color(theme);
     text-align: center;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
       opacity: 1;
-      background-color: $theme_darker;
+      background-color: desaturate(darken(color(theme), 4%), 14%);
     }
   }
 
   &__text {
-    color: $secondary;
+    color: color(secondary);
   }
 }

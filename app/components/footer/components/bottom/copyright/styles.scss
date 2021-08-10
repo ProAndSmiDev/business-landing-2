@@ -8,6 +8,6 @@
     font-size: em($fz, $fz_base);
     line-height: em(18, $fz);
     letter-spacing: em(0.15, $fz);
-    color: $secondary;
+    color: color(secondary);
   }
 }

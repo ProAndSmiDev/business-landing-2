@@ -25,3 +25,15 @@
 
   @return if(length($result) == 1, nth($result, 1), $result);
 }
+
+/*
+  --- Generates a color by template colors ---
+  $name - includes a name for color (example: secondary, theme)
+*/
+@function color($name) {
+  @if map-has-key($colors, $name) {
+    @return map-get($colors, $name);
+  }
+
+  @return null;
+}
