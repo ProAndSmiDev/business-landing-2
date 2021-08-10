@@ -1,3 +1,7 @@
+/*
+  --- Generates em sizes by px ---
+  $args... - includes count of size with or not with a type of size (example: 16px, 16)
+*/
 @function strip-units($unit) {
   @return $unit / ($unit * 0 + 1);
 }

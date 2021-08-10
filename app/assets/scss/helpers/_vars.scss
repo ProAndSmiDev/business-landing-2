@@ -1,14 +1,15 @@
 $main_font: 'WorkSans';
 
-$phone: '419px';
-$smart_phone: '479px';
-$tablet: '767px';
-$banner_tablet: '800px';
-$desktop: '1023px';
-//$wide_screen: '1200px';
-//$wide_screen: '1600px';
-
-$primary: hsl(209, 99%, 57%);
-$secondary: hsl(0, 0%, 100%);
-$third: hsl(0, 0%, 0%);
+$theme: hsl(209, 99%, 57%);
+$theme_darker: desaturate(darken($theme, 4%), 14%); // #208AED
 $error: hsl(0, 100%, 48%);
+
+$primary: hsl(0, 0, 0%);
+$primary_lighter: lighten($primary, 9%); // #171717
+$primary_light: lighten($primary, 11%);  // #1b1b1b
+$primary_light_med: lighten($primary, 14%); // #232323
+$primary_med: lighten($primary, 35%); // #585858
+$secondary: hsl(0, 0%, 100%);
+$secondary_darker: darken($secondary, 4%); // #f5f5f5, whitesmoke
+$secondary_med: saturate(darken($secondary, 7%), 14%); // #f0ebeb
+$secondary_dark: darken($secondary, 23%); // #c4c4c4c
