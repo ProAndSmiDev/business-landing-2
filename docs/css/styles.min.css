@@ -199,14 +199,24 @@ footer {
   content: 'next';
 }
 
-.swiper-button-prev.swiper-button-white,
-.swiper-button-next.swiper-button-white {
-  --swiper-navigation-color: #fff;
+.swiper-button-prev.swiper-button-theme,
+.swiper-button-next.swiper-button-theme {
+  --swiper-navigation-color: #2595fe;
 }
 
-.swiper-button-prev.swiper-button-black,
-.swiper-button-next.swiper-button-black {
+.swiper-button-prev.swiper-button-error,
+.swiper-button-next.swiper-button-error {
+  --swiper-navigation-color: #f50000;
+}
+
+.swiper-button-prev.swiper-button-primary,
+.swiper-button-next.swiper-button-primary {
   --swiper-navigation-color: #000;
+}
+
+.swiper-button-prev.swiper-button-secondary,
+.swiper-button-next.swiper-button-secondary {
+  --swiper-navigation-color: #fff;
 }
 
 .swiper-button-lock {
