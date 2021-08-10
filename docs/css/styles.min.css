@@ -849,7 +849,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: .9375em;
-    border: 1px solid #fff;
+    border-top: 1px solid #fff;
     background-color: #000;
   }
 
