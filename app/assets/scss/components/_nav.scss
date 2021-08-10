@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     height: em(2, $fz);
-    background-color: $theme;
+    background-color: color(theme);
     transition: left 0.3s ease-in-out, max-width 0.3s ease-in-out;
 
     @include media(tablet, 'max') {
@@ -49,8 +49,8 @@
   @include media(tablet, 'max') {
     flex-direction: column;
     padding: em(15, $fz);
-    border: 1px solid $secondary;
-    background-color: $primary;
+    border: 1px solid color(secondary);
+    background-color: color(primary);
   }
 
   &__item {
@@ -58,7 +58,7 @@
       &--is-active {
         #{$self} {
           &__link {
-            border-bottom: 2px solid $theme;
+            border-bottom: 2px solid color(theme);
           }
         }
       }
@@ -93,7 +93,7 @@
     $fz: 18;
     font-size: em($fz, $fz_base);
     font-weight: 500;
-    color: $secondary;
+    color: color(secondary);
   }
 }
 
@@ -137,7 +137,7 @@
     display: block;
     width: 100%;
     height: em(2, $fz);
-    background-color: $secondary;
+    background-color: color(secondary);
     transition: transform 0.3s ease-in-out;
     will-change: transform;
   }
@@ -148,6 +148,6 @@
     height: em(2, $fz);
     margin-top: em(5, $fz);
     margin-bottom: em(5, $fz);
-    background-color: $secondary;
+    background-color: color(secondary);
   }
 }

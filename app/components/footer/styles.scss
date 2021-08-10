@@ -3,7 +3,7 @@
     padding-top: em(82, $fz);
     padding-bottom: em(82, $fz);
     min-height: em(390, $fz);
-    background-color: $primary_light_med;
+    background-color: lighten(color(primary), 14%);
 
     @include media(tablet, 'max') {
       padding-top: em(20, $fz);
@@ -42,7 +42,7 @@
     padding-top: em(20, $fz);
     padding-bottom: em(20, $fz);
     min-height: em(60, $fz);
-    background-color: $primary_light;
+    background-color: lighten(color(primary), 11%);
 
     .u-wrapper {
       &--is-row {

@@ -49,7 +49,7 @@
             right: em(-6, $fz);
             width: em(1, $fz);
             height: 50%;
-            background-color: $secondary;
+            background-color: color(secondary);
             transform: translateY(-50%);
           }
         }
@@ -68,5 +68,5 @@
 }
 
 .list-link {
-  color: $secondary;
+  color: color(secondary);
 }
