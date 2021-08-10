@@ -20,11 +20,11 @@ mixin genIconMenu(menu, parent, target)
   ul.list(class=`${parent}__list`)
     for val in menu
       li.list__item
-        a.list__link(href=val.url title=val.urlTitle target=target)
-          span.list__icon(class=`${prefix}-list__icon--${val.postfix}`)
+        a.list-link.list__link(href=val.url title=val.urlTitle target=target)
+          svg.list-link__icon
+            use(xlink:href=`/img/sprite.svg#${val.postfix}`)
 
-
-mixin genMainMenu(menu, parent, mode = '', isNav = false, isHeader = false)
+mixin genMainMenu(menu, parent, mode= '', isNav= false, isHeader= false)
   if isNav
     nav.nav(class=`${parent}__nav`)
       span.nav__line

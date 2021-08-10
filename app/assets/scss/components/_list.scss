@@ -5,13 +5,13 @@
   &--is-top-footer {
     flex-direction: column;
 
-    @media (max-width: $tablet) {
+    @include media(tablet, 'max') {
       flex-direction: row;
     }
 
     #{$self} {
       &__item {
-        @media (max-width: $tablet) {
+        @include media(tablet, 'max') {
           &:not(:last-child) {
             margin-right: em(15, $fz);
           }
@@ -24,9 +24,9 @@
         $fz: 14;
         font-size: em($fz, $fz_base);
         line-height: em(56, $fz);
-        letter-spacing: em(.15, $fz);
-        
-        @media (max-width: $tablet) {
+        letter-spacing: em(0.15, $fz);
+
+        @include media(tablet, 'max') {
           $fz: 12;
           font-size: em($fz, $fz_base);
           line-height: em(28, $fz);

@@ -5,7 +5,7 @@
     min-height: em(390, $fz);
     background-color: $primary_light_med;
 
-    @media (max-width: $tablet) {
+    @include media(tablet, 'max') {
       padding-top: em(20, $fz);
       padding-bottom: em(20, $fz);
       min-height: auto;
@@ -15,9 +15,9 @@
       &--is-row {
         align-items: flex-start;
 
-        @media (max-width: $tablet) {
-          align-items: center;
+        @include media(tablet, 'max') {
           flex-direction: column;
+          align-items: center;
         }
       }
     }
@@ -27,9 +27,9 @@
         $fz: 18;
         font-size: em($fz, $fz_base);
         line-height: em(56, $fz);
-        letter-spacing: em(.15, $fz);
+        letter-spacing: em(0.15, $fz);
 
-        @media (max-width: $tablet) {
+        @include media(tablet, 'max') {
           $fz: 16;
           font-size: em($fz, $fz_base);
           line-height: em(28, $fz);
@@ -46,7 +46,7 @@
 
     .u-wrapper {
       &--is-row {
-        @media (max-width: $tablet) {
+        @include media(tablet, 'max') {
           flex-direction: column;
         }
       }

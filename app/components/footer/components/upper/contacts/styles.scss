@@ -1,15 +1,47 @@
 .contacts {
-  @media (max-width: $tablet) {
+  @include media(tablet, 'max') {
     margin-top: em(20, $fz);
     text-align: center;
   }
 
   &__text {
     $fz: 14;
-    font-size: em($fz, $fz_base);
-    color: $secondary;
-    line-height: em(26, $fz);
-    letter-spacing: em(.15, $fz);
     max-width: em(177, $fz);
+    font-size: em($fz, $fz_base);
+    line-height: em(26, $fz);
+    letter-spacing: em(0.15, $fz);
+    color: $secondary;
+  }
+
+  &__list {
+    display: inline-flex;
+    margin-top: em(35, $fz);
+
+    @include media(tablet, 'max') {
+      margin-top: em(10, $fz);
+    }
+
+    .list {
+      &__item {
+        &:not(:last-child) {
+          margin-right: em(20, $fz);
+
+          @include media(tablet, 'max') {
+            margin-right: em(16, $fz);
+          }
+        }
+      }
+
+      &__link {
+        display: inline-flex;
+        width: em(32, $fz);
+        height: em(32, $fz);
+
+        @include media(tablet, 'max') {
+          width: em(24, $fz);
+          height: em(24, $fz);
+        }
+      }
+    }
   }
 }

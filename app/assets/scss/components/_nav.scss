@@ -2,6 +2,10 @@
   display: flex;
   position: relative;
 
+  @include media(tablet, 'max') {
+    position: static;
+  }
+
   .header &__line {
     content: '';
     position: absolute;
@@ -12,7 +16,7 @@
     background-color: $theme;
     transition: left 0.3s ease-in-out, max-width 0.3s ease-in-out;
 
-    @media (max-width: $tablet) {
+    @include media(tablet, 'max') {
       opacity: 0;
     }
   }
@@ -24,21 +28,17 @@
   &__list {
     position: relative;
 
-    @media (max-width: $tablet) {
+    @include media(tablet, 'max') {
       position: absolute;
       top: em(87, $fz);
       left: -100vw;
       width: 100vw;
-      transition: left .3s ease-in-out;
+      transition: left 0.3s ease-in-out;
 
       &--is-active {
         left: 0;
       }
     }
-  }
-
-  @media (max-width: $tablet) {
-    position: static;
   }
 }
 
@@ -46,7 +46,24 @@
   $self: &;
   display: flex;
 
+  @include media(tablet, 'max') {
+    flex-direction: column;
+    padding: em(15, $fz);
+    border: 1px solid $secondary;
+    background-color: $primary;
+  }
+
   &__item {
+    @include media(tablet, 'max') {
+      &--is-active {
+        #{$self} {
+          &__link {
+            border-bottom: 2px solid $theme;
+          }
+        }
+      }
+    }
+
     &:nth-child(2) {
       &:hover {
         ~ #{$self}::after {
@@ -58,27 +75,10 @@
     &:not(:last-child) {
       padding-right: em(15, $fz);
 
-      @media (max-width: $tablet) {
+      @include media(tablet, 'max') {
         padding-right: 0;
       }
     }
-
-    @media (max-width: $tablet) {
-      &--is-active {
-        #{$self} {
-          &__link {
-            border-bottom: 2px solid $theme;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: $tablet) {
-    flex-direction: column;
-    padding: em(15, $fz);
-    border: 1px solid $secondary;
-    background-color: $primary;
   }
 }
 
@@ -100,12 +100,12 @@
 .nav-burger {
   $self: &;
   $fz: 16;
-  height: em(30, $fz);
-  width: em(30, $fz);
-  font-size: 16px;
   display: none;
+  width: em(30, $fz);
+  height: em(30, $fz);
+  font-size: 16px;
 
-  @media (max-width: $tablet) {
+  @include media(tablet, 'max') {
     display: block;
   }
 

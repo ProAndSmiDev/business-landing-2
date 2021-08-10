@@ -1,13 +1,5 @@
 $main_font: 'WorkSans';
 
-$phone: '419px';
-$smart_phone: '479px';
-$tablet: '767px';
-$banner_tablet: '800px';
-$desktop: '1023px';
-//$wide_screen: '1200px';
-//$wide_screen: '1600px';
-
 $theme: hsl(209, 99%, 57%);
 $theme_darker: desaturate(darken($theme, 4%), 14%); // #208AED
 $error: hsl(0, 100%, 48%);
