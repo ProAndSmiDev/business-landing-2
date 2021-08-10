@@ -1,20 +1,20 @@
 mixin genLogo(parent)
   a(class=`${prefix}-logo ${prefix}-${parent}__logo` href=company.logo.url title=company.logo.urlTitle)
     picture(class=`${prefix}-logo__pic`)
-      source(type='image/webp' srcset=`/img/${company.logo.fileName}.webp`)
-      img(class=`${prefix}-logo__img` alt=alt src=`/img/${company.logo.fileName}.png`)
+      source(type='image/webp' srcset=`./img/${company.logo.fileName}.webp`)
+      img(class=`${prefix}-logo__img` alt=alt src=`./img/${company.logo.fileName}.png`)
 
 mixin genMeta(name, content)
   meta(name=name content=content)
 
 mixin genLink(file, rel)
   if(rel === 'shortcut icon')
-    link(href='/img/' + file, rel=rel)
+    link(href='./img/' + file, rel=rel)
   else if(rel === 'stylesheet')
-    link(href='/css/' + file + '.css', rel=rel)
+    link(href='./css/' + file + '.css', rel=rel)
 
 mixin genScript(file)
-  script(src="/js/" + file + ".js")
+  script(src="./js/" + file + ".js")
 
 mixin genIconMenu(menu, parent, target)
   ul.list(class=`${parent}__list`)
@@ -22,7 +22,7 @@ mixin genIconMenu(menu, parent, target)
       li.list__item
         a.list-link.list__link(href=val.url title=val.urlTitle target=target)
           svg.list-link__icon
-            use(xlink:href=`/img/sprite.svg#${val.postfix}`)
+            use(xlink:href=`./img/sprite.svg#${val.postfix}`)
 
 mixin genMainMenu(menu, parent, mode= '', isNav= false, isHeader= false)
   if isNav
