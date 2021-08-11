@@ -1,0 +1,56 @@
+.subscribe {
+  @include media(tablet, 'max') {
+    margin-top: em(20, $fz);
+    text-align: center;
+  }
+}
+
+.subscribe-form {
+  &__email {
+    $fz: 14;
+    padding-right: em(15, $fz);
+    padding-left: em(15, $fz);
+    width: 100%;
+    max-width: em(255, $fz);
+    border-radius: em(4, $fz);
+    background-color: darken(color(secondary), 4%);
+    font-size: em($fz, $fz_base);
+    line-height: em(48, $fz);
+    letter-spacing: em(0.15, $fz);
+    color: lighten(color(primary), 14%);
+
+    @include media(tablet, 'max') {
+      $fz: 12;
+      max-width: 100%;
+      font-size: em($fz, $fz_base);
+      line-height: em(34, $fz);
+    }
+  }
+
+  &__submit {
+    $fz: 18px;
+    padding-top: em(11, $fz);
+    padding-bottom: em(11, $fz);
+    width: 100%;
+    max-width: em(255, $fz);
+    margin-top: em(30, $fz);
+    border-radius: em(4, $fz);
+    background-color: color(theme);
+    font-size: em($fz, $fz_base);
+    line-height: em(26, $fz);
+    letter-spacing: em(0.15, $fz);
+    color: color(secondary);
+    transition: background-color 0.3s ease-in-out;
+
+    @include media(tablet, 'max') {
+      $fz: 14;
+      max-width: 100%;
+      margin-top: em(7, $fz);
+      font-size: em($fz, $fz_base);
+    }
+
+    &:hover {
+      background-color: desaturate(darken(color(theme), 4%), 14%);
+    }
+  }
+}

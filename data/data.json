@@ -12,6 +12,65 @@
       "description": "Some description for project"
     }
   },
+  "menuBlocks": [
+    {
+      "title": "Home",
+      "urlTitle": "Go to beginning",
+      "url": "#"
+    },
+    {
+      "title": "About us",
+      "urlTitle": "Go to section About us",
+      "url": "#about-us"
+    },
+    {
+      "title": "Team",
+      "urlTitle": "Go to section Team",
+      "url": "#our-team"
+    },
+    {
+      "title": "Projects",
+      "urlTitle": "Go to section Projects",
+      "url": "#projects"
+    },
+    {
+      "title": "Contacts",
+      "urlTitle": "Go to section Contact",
+      "url": "#contacts"
+    }
+  ],
+  "footer": {
+    "addMenu": [
+      {
+        "title": "Privacy Policy",
+        "url": "#",
+        "urlTitle": "Go to our policy"
+      },
+      {
+        "title": "Terms & Conditions",
+        "url": "#",
+        "urlTitle": "Go to our terms and conditions"
+      }
+    ],
+    "socials": [
+      {
+        "urlTitle": "We placed in facebook",
+        "url": "#",
+        "postfix": "fb"
+      },
+      {
+        "urlTitle": "We placed in Twitter",
+        "url": "#about-us",
+        "postfix": "tw"
+      },
+      {
+        "urlTitle": "We placed in Instagramm",
+        "url": "#team",
+        "postfix": "in"
+      }
+    ],
+    "copyright": "Tagline lorem ipsum dolor sit amet, consectetur adipiscing eiusmod ©&nbsp;2021&nbsp;Company."
+  },
   "copyright": {
     "author": "AndSmi",
     "copyright": "Developed by AndSmi"

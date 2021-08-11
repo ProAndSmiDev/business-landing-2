@@ -1,4 +1,4 @@
-# Проект:
+# Проект "Business-landing":
 ![Лого проекта][1]
 
 ---
@@ -99,5 +99,5 @@
 ### Frontend-разработчик:
 [![Лого специалиста по веб-разработке][2]](https://andsmi.ru)
 
-[1]: app/assets/img/logo.png
+[1]: app/assets/svg/logo.svg
 [2]: app/dev/logo.png

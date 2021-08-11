@@ -1,0 +1,9 @@
+.footer__upper
+  .u-wrapper.u-wrapper--is-row.footer__wrapper
+    include components/upper/menu/Index
+    include components/upper/subscribe/Index
+    include components/upper/contacts/Index
+.footer__bottom
+  .u-wrapper.u-wrapper--is-row.footer__wrapper
+    include components/bottom/copyright/Index
+    +genMainMenu(footer.addMenu, 'footer', 'is-bottom-footer')

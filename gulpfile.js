@@ -17,6 +17,7 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const browserify = require('gulp-bro');
 const babelify = require('babelify');
 const gcmq = require('gulp-group-css-media-queries');
+const csso = require('gulp-csso');
 
 const isProd = (process.env.NODE_ENV === 'prod');
 const root = {
@@ -44,10 +45,8 @@ const prod = {
 
 /* Работа со стилями */
 const stylesMin = () => {
-  let stylesGen = '';
-
   if (!isProd) {
-    stylesGen = src(dev.scss)
+    return src(dev.scss)
       .pipe(sourcemaps.init())
       .pipe(sass({
         outputStyle: 'expanded',
@@ -63,11 +62,12 @@ const stylesMin = () => {
       }))
       .pipe(gcmq())
       .pipe(sourcemaps.write('.'))
-      .pipe(sync.stream());
+      .pipe(sync.stream())
+      .pipe(dest(prod.css));
   } else {
-    stylesGen = src(dev.scss)
+    return src(dev.scss)
       .pipe(sass({
-        outputStyle: 'compressed',
+        outputStyle: 'expanded',
       }).on('error', notify.onError()))
       .pipe(prefix([
         '> 1%',
@@ -79,10 +79,10 @@ const stylesMin = () => {
         basename: 'styles',
         suffix: '.min',
       }))
-      .pipe(gcmq());
+      .pipe(gcmq())
+      .pipe(csso())
+      .pipe(dest(prod.css));
   }
-
-  return stylesGen.pipe(dest(prod.css));
 };
 /* Работа со стилями */
 
@@ -103,7 +103,7 @@ const getModules = () => {
 
 /* Работа со скриптами */
 const jsMin = series([getModules], () => {
-  return src([dev.js, `!${dev.jsHelpers}`])
+  return src([dev.jsHelpers, dev.js])
     .pipe(concat('app.min.js'))
     .pipe(uglES())
     .pipe(dest(prod.js));

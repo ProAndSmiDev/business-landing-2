@@ -1,0 +1,17 @@
+.header {
+  background-color: color(primary);
+
+  &__wrapper {
+    flex-direction: row;
+    padding-top: em(29, $fz);
+    padding-bottom: em(29, $fz);
+  }
+
+  &__link {
+    &--is-logo {
+      width: 100%;
+      max-width: em(141, $fz);
+      line-height: 1;
+    }
+  }
+}

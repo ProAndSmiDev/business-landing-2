@@ -34,15 +34,19 @@ body {
   max-width: em(1140, $fz);
   margin-right: auto;
   margin-left: auto;
+
+  &--is-row {
+    flex-direction: row;
+  }
 }
 
 .title {
   text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
   font-weight: 700;
+  color: color(secondary);
 
   &--is-inverted {
-    color: lighten($third, 14%);
+    color: lighten(color(primary), 14%);
   }
 
   &__text {
@@ -59,17 +63,17 @@ body {
 
   &--is-btn {
     padding: em(11 15, $fz);
-    background-color: $primary;
+    background-color: color(theme);
     text-align: center;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
       opacity: 1;
-      background-color: darken($primary, 10%);
+      background-color: desaturate(darken(color(theme), 4%), 14%);
     }
   }
 
   &__text {
-    color: $secondary;
+    color: color(secondary);
   }
 }
