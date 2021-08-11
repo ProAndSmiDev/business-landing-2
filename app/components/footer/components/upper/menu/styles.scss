@@ -1,5 +1,18 @@
 .menu {
+  $self: 'menu';
+
   .title {
     text-align: center;
+  }
+
+  @at-root .footer__#{$self} {
+    .list-link {
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        color: desaturate(darken(color(theme), 4%), 14%);
+      }
+    }
   }
 }
