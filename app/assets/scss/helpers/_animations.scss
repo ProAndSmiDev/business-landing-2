@@ -1,0 +1,18 @@
+@keyframes pulse {
+  @include pulseColor;
+}
+
+.pulse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0;
+  animation: pulse 1.5s infinite;
+
+  &:hover {
+    animation-duration: 0.75s;
+  }
+}
